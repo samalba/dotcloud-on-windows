@@ -21,8 +21,8 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-OutputDir=C:\Users\jr\Desktop\sam
-OutputBaseFilename=dotcloud-cli-setup
+;OutputDir=
+OutputBaseFilename=dotcloud-cli
 Compression=lzma
 SolidCompression=yes
 PrivilegesRequired=admin
@@ -42,7 +42,7 @@ Source: "pkg\install-dotcloud-cli.bat"; DestDir: "{app}\pkg"
 Source: "pkg\run-dotcloud-cli.bat"; DestDir: "{app}\pkg"
 
 [Run]
-Filename: "{app}\pkg\cygwin.exe"; Parameters: "--no-shortcuts --quiet-mode --disable-buggy-antivirus --packages wget,rsync,python,git,mercurial"
+Filename: "{app}\pkg\cygwin.exe"; Parameters: "--no-shortcuts --quiet-mode --disable-buggy-antivirus --packages openssh,wget,rsync,python,git,mercurial"
 Filename: "{app}\pkg\install-dotcloud-cli.bat"
 
 [Icons] 
